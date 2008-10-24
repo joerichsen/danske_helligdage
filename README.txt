@@ -13,7 +13,20 @@ https://www.borger.dk/Emner/samfundogrettigheder/kirkeogtro/Sider/officiellehell
 
 == SYNOPSIS:
 
+Get the name of a public holiday
+  Date.civil(2008, 12, 25).helligdag returns 'Juledag'
 
+Ask whether a date is a public holiday
+  Date.civil(2008, 12, 25).helligdag? returns true
+  
+Ask whether a date is a working day
+  Date.civil(2008, 12, 25).arbejdsdag? returns false
+  
+Get the number of working days for a given month
+  Date.arbejdsdage(2008, 1) returns 22
+
+Or for a specific period
+  Date.arbejdsdage_i_periode(Date.civil(2008, 1, 1), Date.civil(2008, 12, 31)) returns 252
 
 == REQUIREMENTS:
 
