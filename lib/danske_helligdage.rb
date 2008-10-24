@@ -1,5 +1,6 @@
 require 'date'
 
+# An extension to the Date class that provides some methods for working with public holidays in Denmark.
 module DanskeHelligdage
 
   VERSION = '1.0.0'
@@ -18,20 +19,24 @@ module DanskeHelligdage
     end
   end
 
+  # Returns true if it is a working day
   def arbejdsdag?
     !weekend? && !helligdag?
   end
 
+  # Returns true if it is a weekend
   def weekend?
     wday == 0 || wday == 6
   end
   
+  # Returns true if it is a public holiday
   def helligdag?
     not helligdag.nil?
   end
 
+  # Returns the name of public holiday
   def helligdag
-    paaskedag = easter(year)
+    paaskedag = easter
   
     relative_dates = {
       (paaskedag - 7)  => "Palmesøndag",	
@@ -55,8 +60,10 @@ module DanskeHelligdage
     (relative_dates.merge(absolute_dates))[self]
   end
 
+  # Returns a date representing Easter
+  #
   # From http://www.dayweekyear.com/faq_holidays_calculation.jsp
-  def easter(year)
+  def easter
     y = year
     a = y % 19
     b = y / 100
@@ -72,7 +79,7 @@ module DanskeHelligdage
     m = (a + 11 * h + 22 * l) / 451
     month = (h + l - 7 * m + 114) / 31
     day = ((h + l - 7 * m + 114) % 31) + 1
-    Date.new(year, month, day)
+    Date.civil(year, month, day)
   end
 
 end
