@@ -1,0 +1,7 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/danske_helligdage
+lib/danske_helligdage.rb
+test/test_danske_helligdage.rb
