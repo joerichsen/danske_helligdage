@@ -13,6 +13,9 @@ https://www.borger.dk/Emner/samfundogrettigheder/kirkeogtro/Sider/officiellehell
 
 == SYNOPSIS:
 
+Require it
+  require 'danske_helligdage'
+
 Get the name of a public holiday
   Date.civil(2008, 12, 25).helligdag returns 'Juledag'
 
@@ -27,6 +30,13 @@ Get the number of working days for a given month
 
 Or for a specific period
   Date.arbejdsdage_i_periode(Date.civil(2008, 1, 1), Date.civil(2008, 12, 31)) returns 252
+
+Note that 1. maj, grundlovsdag and juleaftensdag are not official Danish public holidays,
+so to enable them you do something like this
+  require 'danske_helligdage'
+  require 'danske_helligdage/juleaftensdag'
+
+Then all of the methods above will take juleaftensdag into consideration.
 
 == REQUIREMENTS:
 

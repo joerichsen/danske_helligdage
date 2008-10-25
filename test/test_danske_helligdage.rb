@@ -56,7 +56,7 @@ class DanskeHelligdageTests < Test::Unit::TestCase
   end
 
   def test_should_return_the_number_of_working_days_for_a_given_period
-    assert_equal 252, Date.arbejdsdage_i_periode(Date.civil(2008, 1, 1), Date.civil(2008, 12, 31))
+    assert_equal 253, Date.arbejdsdage_i_periode(Date.civil(2008, 1, 1), Date.civil(2008, 12, 31))
   end
 
 end
