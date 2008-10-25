@@ -29,10 +29,9 @@ Get the number of working days for a given month
   Date.arbejdsdage(2008, 1) returns 22
 
 Or for a specific period
-  Date.arbejdsdage_i_periode(Date.civil(2008, 1, 1), Date.civil(2008, 12, 31)) returns 252
+  Date.arbejdsdage_i_periode(Date.civil(2008, 1, 1), Date.civil(2008, 12, 31)) returns 253
 
-Note that 1. maj, grundlovsdag and juleaftensdag are not official Danish public holidays,
-so to enable them you do something like this
+Note that 1. maj, grundlovsdag and juleaftensdag are not official Danish public holidays, so to enable them you do something like this
   require 'danske_helligdage'
   require 'danske_helligdage/juleaftensdag'
 
@@ -44,7 +43,7 @@ Then all of the methods above will take juleaftensdag into consideration.
 
 == INSTALL:
 
-* sudo gem install danske_helligdage
+* sudo gem install joerichsen-danske_helligdage
 
 == LICENSE:
 
