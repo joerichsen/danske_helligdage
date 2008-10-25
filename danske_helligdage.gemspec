@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = %q{Add support for public holidays in Denmark in the Date class}
   s.email = ["joe@erichsen.net"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt"]
-  s.files = ["History.txt", "Manifest.txt", "README.txt", "Rakefile", "bin/danske_helligdage", "lib/danske_helligdage.rb", "test/test_danske_helligdage.rb"]
+  s.files = ["History.txt", "Manifest.txt", "README.txt", "Rakefile", "bin/danske_helligdage", "lib/danske_helligdage.rb", "test/test_danske_helligdage.rb", "test/test_foerste_maj.rb", "test/test_grundlovsdag.rb", "test/test_juleaftensdag.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/joerichsen/danske_helligdage/}
   s.rdoc_options = ["--main", "README.txt"]
