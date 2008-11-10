@@ -53,6 +53,8 @@ class DanskeHelligdageTests < Test::Unit::TestCase
   
   def test_should_return_the_number_of_working_days_for_a_given_month
     assert_equal 22, Date.arbejdsdage(2008, 1)
+    assert_equal 21, Date.arbejdsdage(2008, 2)
+    assert_equal 18, Date.arbejdsdage(2008, 3)
   end
 
   def test_should_return_the_number_of_working_days_for_a_given_period
