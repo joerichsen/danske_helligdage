@@ -14,8 +14,13 @@ module DanskeHelligdage
         (from..to).to_a.select { |date| date.arbejdsdag? }.length
       end
 
-      def arbejdsdage(year, month)
-        arbejdsdage_i_periode(Date.civil(year, month), (Date.civil(year, month) >> 1) - 1)
+      def arbejdsdage(*args)
+        if args[0].is_a? Fixnum
+          year, month = args
+          arbejdsdage_i_periode(Date.civil(year, month), (Date.civil(year, month) >> 1) - 1)
+        else
+          arbejdsdage_i_periode(*args)
+        end
       end
     end
 
