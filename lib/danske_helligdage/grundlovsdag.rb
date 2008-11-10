@@ -5,12 +5,13 @@ module DanskeHelligdage
 
     def self.included(base)
       base.class_eval do
-        alias_method :org_helligdag, :helligdag
+        alias_method :helligdag_without_grundlovsdag, :helligdag
+        alias_method :helligdag, :helligdag_with_grundlovsdag
       end
     end
 
-    def helligdag
-      (month == 6 && day == 5) ? 'Grundlovsdag' : org_helligdag
+    def helligdag_with_grundlovsdag
+      (month == 6 && day == 5) ? 'Grundlovsdag' : helligdag_without_grundlovsdag
     end
 
   end
