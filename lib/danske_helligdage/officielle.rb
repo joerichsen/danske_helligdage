@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 # An extension to the Date class that provides some methods for working with public holidays in Denmark.
 module DanskeHelligdage
 
