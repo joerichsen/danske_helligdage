@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 require 'danske_helligdage'
 
 class DanskeHelligdageTests < Test::Unit::TestCase
