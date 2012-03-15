@@ -2,8 +2,6 @@
 # An extension to the Date class that provides some methods for working with public holidays in Denmark.
 module DanskeHelligdage
 
-  VERSION = '1.0.0'
-  
   module Officielle
     
     def self.included(base)

@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+require 'test/unit'
 require 'danske_helligdage'
 require 'danske_helligdage/arbejdsdag'
 

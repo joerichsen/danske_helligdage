@@ -1,3 +1,4 @@
+require 'test/unit'
 require 'danske_helligdage'
 
 class FoersteMajTests < Test::Unit::TestCase
