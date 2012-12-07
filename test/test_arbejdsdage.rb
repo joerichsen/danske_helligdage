@@ -32,4 +32,21 @@ class ArbejdsdageTests < Test::Unit::TestCase
   def test_should_return_next_3_working_day_before_holiday_and_weekend
     assert_equal Date.civil(2008, 5, 6), Date.civil(2008, 4, 30).arbejdsdag(3)
   end
+
+  def test_should_return_previous_working_day
+    assert_equal Date.civil(2008, 5, 5), Date.civil(2008, 5, 6).arbejdsdag(-1)
+  end
+
+  def test_should_return_previous_working_day_on_a_monday
+    assert_equal Date.civil(2008, 5, 2), Date.civil(2008, 5, 5).arbejdsdag(-1)
+  end
+
+  def test_should_return_next_working_day_on_a_holiday
+    assert_equal Date.civil(2008, 4, 30), Date.civil(2008, 5, 2).arbejdsdag(-1)
+  end
+
+  def test_should_return_previous_3_working_day_before_holiday_and_weekend
+    assert_equal Date.civil(2008, 4, 30), Date.civil(2008, 5, 6).arbejdsdag(-3)
+  end
+
 end
