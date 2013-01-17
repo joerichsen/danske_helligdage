@@ -1,3 +1,4 @@
+require 'test/unit'
 require 'danske_helligdage'
 
 class GrundlovsdagTests < Test::Unit::TestCase

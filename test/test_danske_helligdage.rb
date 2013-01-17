@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+require 'test/unit'
 require 'danske_helligdage'
 
 class DanskeHelligdageTests < Test::Unit::TestCase
